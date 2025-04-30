@@ -16,7 +16,7 @@ from datetime import datetime  # To get timestamps in human-readable form
 from adafruit_bmp280 import Adafruit_BMP280_I2C  # For BMP280 temperature sensor over I2C
 from adafruit_ahtx0 import AHTx0  # For AHT20 temperature and humidity sensor
 
-%%%%%%%%%%%%%%%%%%%% Wi-Fi, Firebase Setup, and I2C Sensor Initialization   %%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%%%% Wi-Fi, Firebase Setup, and I2C Sensor Initialization   %%%%%%%%%%%%%%%%%%%%%%
 
 # Wi-Fi and Firebase credentials (used during authentication)
 WIFI_SSID = ""
@@ -65,7 +65,7 @@ except Exception as e:
     
     
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  GPIO (Relays) Setup   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  GPIO (Relays) Setup   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 # GPIO pin numbers connected to relays
 Relay = [5, 6, 13]
@@ -191,13 +191,13 @@ def init_firebase_stream():
             
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Logging for debugging   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Logging for debugging   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 logging.basicConfig(filename='/home/pi/bms.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 logging.info("Battery monitoring started")
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Main loop processing   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Main loop processing   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 def main_loop():
     last_send_time = time()  # Store the time of the last data upload
 
